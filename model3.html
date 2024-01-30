@@ -1,0 +1,1872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>model3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parentbox {
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/5a7b3001-249f-4065-a330-4ea6a17ccf7b/bvlatuR/std/2560x1708/Model-3-Main-Hero-Desktop-LHD);
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+        }
+
+        .childnavbar {
+            height: 60px;
+            width: 100%;
+            background-color: transparent;
+            /* border: 1px solid white; */
+            /* position: fixed; */
+        }
+
+        .logoborder {
+            height: 45px;
+            width: 158px;
+            margin-left: 50px;
+            cursor: pointer;
+            display: inline-block;
+            /* border: 2px solid; */
+            vertical-align: top;
+        }
+
+        .img1 {
+            height: 100%;
+            width: 100%;
+            background-color: white;
+        }
+
+        .navbar {
+            height: 50px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 120px;
+            padding: 1px;
+            width: max-content;
+
+            /* border: 1px solid; */
+        }
+
+        .content {
+            margin-top: 5px;
+            margin-left: -0.4%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            display: inline-block;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.767);
+            border-radius: 5px;
+            padding: 9px 18px;
+            cursor: pointer;
+            color: white;
+
+            transition-property: background-color;
+            transition-duration: 0.5s;
+            transition-delay: 0.2s;
+
+
+        }
+
+        .content:hover {
+            background-color: rgba(192, 192, 192, 0.253);
+        }
+
+        .smallnavbar {
+            height: 50px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 1px;
+
+        }
+
+        .border {
+            height: 20vh;
+            width: 100%;
+            /* border: 1px solid white; */
+            padding: 1px;
+
+        }
+
+        .smallbox1 {
+            height: 13vh;
+            width: 20%;
+            /* border: 1px solid white; */
+            margin-left: 550px;
+            display: block;
+        }
+
+        .nametop {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 55px;
+            margin-top: 22px;
+        }
+
+        .smallbox2 {
+            height: 10vh;
+            width: 16%;
+            /* border: 1px solid white; */
+            margin-left: 580px;
+            display: block;
+        }
+
+        .divline {
+            height: 2px;
+            width: 85%;
+            background-color: white;
+            margin-left: 15px;
+            transition-duration: 0.1s;
+
+        }
+
+        .divline:hover {
+            height: 3px;
+            background-color: white;
+            cursor: pointer;
+
+        }
+
+
+
+        .nametop2 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: lighter;
+            font-size: 18px;
+            margin-top: -20px;
+            cursor: pointer;
+
+        }
+
+        .bartext2 {
+            height: 18vh;
+            width: 50%;
+            /* border: 1px solid; */
+
+            margin-left: 350px;
+            margin-top: 200px;
+            position: relative;
+
+        }
+
+        .textboxes {
+            height: 110px;
+            width: 200px;
+            /* border: 1px solid white; */
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .heading {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: bolder;
+            margin-top: 30px;
+            font-size: 20px;
+            display: block;
+
+        }
+
+        .p1 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .bartext3 {
+            height: 18vh;
+            width: 100%;
+            /* border: 1px solid; */
+            /* margin-top: 200px; */
+        }
+
+        .navbar4 {
+            height: 6vh;
+            width: 20%;
+            margin-left: 400px;
+            margin-top: 50px;
+            display: inline-block;
+            border-radius: 5px;
+            vertical-align: top;
+            /* border: 1px solid white; */
+        }
+
+        .btbar {
+            height: 6vh;
+            width: 270px;
+            background-color: transparent;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: white;
+            border-radius: 5px;
+            /* margin-top: 50px; */
+            border: 3px solid white;
+            transition-duration: 0.5s;
+
+            cursor: pointer;
+
+        }
+
+        .btbar:hover {
+            background-color: white;
+            color: black;
+
+
+        }
+
+        .navbar5 {
+            height: 6vh;
+            width: 20%;
+            /* border: 1px solid; */
+            margin-left: 30px;
+            margin-top: 50px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .btbar2 {
+            height: 6vh;
+            width: 270px;
+            background-color: rgb(34, 34, 34);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            /* margin-top: 50px; */
+            border: none;
+            transition-duration: 0.5s;
+
+            /* cursor: pointer; */
+
+        }
+
+        .btbar2:hover {
+            background-color: rgba(92, 85, 85, 0.699);
+            cursor: pointer;
+
+
+        }
+
+        .parent1 {
+            height: 110vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+
+        .box1 {
+            height: 77vh;
+            width: 70%;
+            /* border: 1px solid; */
+            margin-top: 52px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .img1 {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .box2 {
+            height: 77vh;
+            width: 29%;
+            /* border: 1px solid; */
+            margin-top: 52px;
+            display: inline-block;
+        }
+
+        .navbox {
+            height: 50px;
+            width: 150px;
+            /* border: 1px solid; */
+            margin-top: 20px;
+            display: block;
+        }
+
+        .text {
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            margin-top: 20px;
+
+        }
+
+        .navbox2 {
+            height: 50px;
+            width: 250px;
+            /* border: 1px solid; */
+            margin-top: 20px;
+            display: block;
+        }
+
+        .text2 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+
+        }
+
+        .box3 {
+            height: 15vh;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 20px;
+            display: block;
+        }
+
+        .text3 {
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin-top: 10px;
+            line-height: 140%;
+        }
+
+        .line {
+            color: gray;
+
+        }
+
+        .textheading {
+            color: rgb(83, 81, 81);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        .box4 {
+            height: 70px;
+            width: 350px;
+            /* border: 1px solid;  */
+            margin-left: 950px;
+            margin-top: -40px;
+        }
+
+        .plus {
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+            /* margin-top: 20px; */
+            background-color: transparent;
+
+        }
+
+        .plus:hover {
+            background-color: black;
+            cursor: pointer;
+        }
+
+        .hoverboxes1 {
+            height: 30px;
+            width: 100px;
+            /* border: 1px solid; */
+            margin-left: 50px;
+            margin-top: -40px;
+        }
+
+        .ltext {
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .hoverboxes2 {
+            height: 40px;
+            width: 200px;
+            /* border: 1px solid; */
+            margin-left: 150px;
+            margin-top: -45px;
+        }
+
+        .der {
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+            background-color: white;
+            border: 3px solid;
+            color: black;
+            transition-duration: 1.2s;
+
+        }
+
+        .der:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border: 3px solid;
+        }
+
+        .parent2 {
+            height: 60vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/1a5ba4b1-efd8-40bc-8b6d-e81bf8223e37/bvlatuR/std/2560x1440/Model-3-Performance-Hero-Desktop-LHD);
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+        }
+
+        .bartext4 {
+            height: 18vh;
+            width: 80%;
+            /* border: 1px solid; */
+            margin-left: 180px;
+            margin-top: 230px;
+            position: relative;
+
+        }
+
+        .textboxes2 {
+            height: 110px;
+            width: 280px;
+            /* border: 1px solid white; */
+            margin-left: 20px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .parent3 {
+            height: 35vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+
+        .headbox {
+            height: 28vh;
+            width: 30%;
+            /* border: 1px solid; */
+            margin-left: 100px;
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .navbox3 {
+            height: 5vh;
+            width: 40%;
+            /* border: 1px solid; */
+            display: block;
+            padding: 1px;
+
+        }
+
+        .text4 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+            font-weight: lighter;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        .navbox4 {
+            height: 5vh;
+            width: 80%;
+            /* border: 1px solid; */
+            display: block;
+
+        }
+
+        .text5 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(39, 42, 48);
+            font-size: 27px;
+            margin-top: -50px;
+            font-weight: bold;
+        }
+
+        .headbox2 {
+            height: 28vh;
+            width: 50%;
+            /* border: 1px solid; */
+            margin-left: 50px;
+            margin-top: 30px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .text6 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+            line-height: 130%;
+            margin-top: 20px;
+
+        }
+
+        .line2 {
+
+            height: 3px;
+            width: 100%;
+            background-color: gray;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+
+
+
+
+        .navbox5 {
+            height: 12vh;
+            width: 88%;
+            /* border: 1px solid;    */
+            margin-top: 20px;
+            display: block;
+
+        }
+
+        .parent4 {
+            height: 60vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/a7d91e4d-ba1e-41f1-b996-36fb4c925f57/bvlatuR/std/2560x1600/Model-3-AWD-Hero-Desktop-LHD);
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+        }
+
+        .icon {
+            height: 30px;
+            width: 30px;
+            margin-left: 110px;
+            margin-top: 20px;
+
+
+
+        }
+
+        .parent5 {
+            height: 35vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .borbt {
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+            background-color: white;
+            margin-top: 10px;
+            border: 3px solid;
+            color: black;
+            transition-duration: 1.2s;
+
+        }
+
+        .borbt:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border: 3px solid;
+        }
+
+        .borbt2 {
+            height: 40px;
+            width: 200px;
+            border-radius: 5px;
+            background-color: rgb(110, 105, 105);
+            margin-top: 10px;
+            border: none;
+            color: black;
+            transition-duration: 1.2s;
+            cursor: pointer;
+
+        }
+
+        .parent6 {
+            height: 130vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+
+        .bigbox1 {
+            height: 120vh;
+            width: 70%;
+            /* border: 1px solid; */
+            /* margin-top: 50px; */
+            display: inline-block;
+            background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/b314365b-e41d-4682-b890-608bdbdfa49e/bvlatuR/std/2560x2204/Model-3-Range-Hero-Desktop-LHD);
+            background-position: center;
+            background-size: cover;
+            vertical-align: top;
+        }
+
+        .bartext5 {
+            height: 18vh;
+            width: 93%;
+            /* border: 1px solid; */
+            margin-left: 50px;
+            margin-top: 650px;
+            position: relative;
+
+        }
+
+        .textboxes3 {
+            height: 110px;
+            width: 280px;
+            /* border: 1px solid white; */
+            /* margin-left: 20px; */
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .heading2 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: bolder;
+            margin-top: 30px;
+            font-size: 20px;
+            display: block;
+
+        }
+
+        .p2 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .bigbox2 {
+            height: 60vh;
+            width: 29%;
+            /* border: 1px solid; */
+            /* margin-top: 50px; */
+            display: inline-block;
+        }
+
+        .parent7 {
+            height: 60vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+
+        }
+
+        .borderbox2 {
+            height: 50vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/c960989c-3359-4caf-8cc7-afb07c372d6f/bvlatuR/std/4096x2560/Autopilot-Hero-Vision-Desktop);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .border1 {
+            height: 18vh;
+            width: 28%;
+            /* border: 1px solid; */
+            margin-left: 20px;
+            margin-top: 20px;
+            display: block;
+        }
+
+        .hb {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 30px;
+            margin-top: 20px;
+            font-weight: lighter;
+
+        }
+
+        .hb2 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 30px;
+            font-size: 14px;
+        }
+
+        .circal {
+            height: 40px;
+            width: 40px;
+            border-radius: 100px;
+            background-color: black;
+            margin-left: 30px;
+        }
+
+        .txth6 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin-top: 30px;
+        }
+
+        .txth7 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+        }
+
+        .ptext3 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+            line-height: 140%;
+            font-size: 15px;
+        }
+
+        .parent8 {
+            height: 25vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .child2 {
+            height: 38vh;
+            width: 40%;
+            /* border: 1px solid; */
+            margin-left: 80px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .txth6 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            margin-left: 50px;
+            margin-top: 30px;
+        }
+
+        .txth7 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+        }
+
+
+        .child3 {
+            height: 38vh;
+            width: 48%;
+            /* border: 1px solid; */
+            margin-left: 40px;
+            display: inline-block;
+        }
+
+        .ptext3 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+            line-height: 140%;
+            font-size: 15px;
+        }
+
+        .box5 {
+            height: 55px;
+            width: 350px;
+            /* border: 1px solid;  */
+            margin-left: 50px;
+            margin-top: -150px;
+        }
+
+        .parent9 {
+            height: 70vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(https://tesla-cdn.thron.com/delivery/public/image/tesla/9a77958a-146d-40de-8a5f-0ba8af777fdf/bvlatuR/std/2560x1440/Model-3-Interior-Hero-Desktop-LHD);
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+        }
+
+        .border2 {
+            height: 18vh;
+            width: 28%;
+            /* border: 1px solid; */
+            margin-left: auto;
+            margin-top: 30px;
+            display: block;
+        }
+
+        .hb3 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 30px;
+            margin-top: 20px;
+            font-weight: lighter;
+
+        }
+
+        .hb4 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 30px;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .circal2 {
+            height: 40px;
+            width: 40px;
+            border-radius: 100px;
+            background-color: black;
+            margin-left: 30px;
+        }
+
+        #icon2 {
+            font-size: 22px;
+            color: white;
+            margin-left: 30px;
+            /* margin-top: 40px; */
+
+        }
+
+        .parent10 {
+            height: 28vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+
+        .parent11 {
+            height: 180vh;
+            width: 100%;
+            /* border: 1px solid red; */
+            background-color: black;
+            padding: 1px;
+        }
+
+        .boximg1 {
+            height: 130vh;
+            width: 60%;
+            /* border: 1px solid white; */
+            display: inline-block;
+        }
+
+        .boximg2 {
+            height: 160vh;
+            width: 38%;
+            /* border: 1px solid white; */
+            position: relative;
+            display: inline-block;
+            /* opacity: 0.4; */
+            padding: 1px;
+            vertical-align: top;
+            
+
+
+        }
+
+        :target {
+            z-index: 10;
+        }
+
+
+
+        .divbox {
+            height: 110vh;
+            width: 100%;
+            /* border: 1px solid white; */
+            background-color: black;
+            position: absolute;
+            /* margin-top: 50px; */
+           
+        }
+
+        .divnav {
+            height: 20vh;
+            width: 100%;
+            /* border: 1px solid white; */
+            margin-top: 30px;
+            padding: 1px;
+        }
+
+        .buttonbox {
+            height: 38px;
+            width: 230px;
+            border: 3px solid white;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+            /* display: inline-block; */
+            margin-top: 10px;
+            /* vertical-align: top; */
+            
+
+
+        }
+
+        .hr {
+            height: 2px;
+            width: 60px;
+            color: white;
+
+        }
+
+
+
+
+        .img6 {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            object-fit: cover;
+        }
+
+        .btc {
+            height: 48px;
+            width: 250px;
+            margin-left: 530px;
+            /* margin-top: 20px; */
+            background-color: black;
+            color: white;
+            font-weight: bolder;
+            border-radius: 5px;
+            border: 3px solid white;
+            transition-duration: 1.0s;
+        }
+
+        .btc:hover {
+            color: black;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .btc2 {
+            height: 48px;
+            width: 250px;
+            margin-left: 530px;
+            margin-top: 10px;
+            background-color: rgb(54, 52, 52);
+            color: white;
+            font-weight: bolder;
+            border-radius: 5px;
+            border: none;
+            transition-duration: 1.0s;
+        }
+
+        .btc2:hover {
+            /* color: black; */
+            background-color: rgb(153, 146, 146);
+            cursor: pointer;
+        }
+
+        .navbox1 {
+            height: 80px;
+            width: 280px;
+            /* border: 1px solid red; */
+            margin-top: 30px;
+            display: block;
+        }
+
+        .h5model {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+        }
+
+        .navbox2 {
+            height: 30px;
+            width: 230px;
+            border: 1px solid white;
+            margin-left: 20px;
+            margin-top: 30px;
+            display: block;
+
+        }
+
+        .h5model2 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: lighter;
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .navbox2 {
+            height: 35px;
+            width: 230px;
+            /* border: 1px solid white; */
+            margin-left: 20px;
+            margin-top: 40px;
+
+            display: inline-block;
+            cursor: pointer;
+        }
+
+
+
+        .navbox3 {
+            height: 100px;
+            width: 230px;
+            /* border: 1px solid white; */
+            margin-left: 20px;
+            margin-top: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .h5model3 {
+            font-size: 13px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 20px;
+        }
+
+        .h5model4 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+            font-size: 12px;
+            font-weight: lighter;
+
+        }
+
+        .parent12 {
+            height: 70vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .box13 {
+            height: 40vh;
+            width: 30%;
+            /* border: 1px solid; */
+            margin-left: 30px;
+            margin-top: 150px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .childbox {
+            height: 50px;
+            width: 300px;
+            /* border: 1px solid; */
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+
+        .box14 {
+            height: 40vh;
+            width: 50%;
+            /* border: 1px solid; */
+            margin-left: 230px;
+            margin-top: 150px;
+            display: inline-block;
+        }
+
+        .btn {
+            height: 40px;
+            width: 180px;
+            margin-left: 30px;
+            margin-top: 50px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: transparent;
+            transition-duration: 1.0s;
+            display: inline;
+
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn2 {
+            height: 40px;
+            width: 180px;
+            margin-left: 10px;
+            /* margin-top: -20px; */
+            border: none;
+            border-radius: 5px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: transparent;
+            transition-duration: 1.0s;
+            background-color: rgb(53, 50, 50);
+            cursor: pointer;
+            color: rgb(14, 13, 13);
+
+        }
+
+
+        .img2 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .parent13 {
+            height: 10vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+
+        .endtxt {
+            font-size: 15px;
+            color: gray;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 140%;
+            cursor: pointer;
+        }
+
+        .parent14 {
+            height: 10vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+
+        .content2 {
+            margin-top: 20px;
+            margin-left: -0.4%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-weight: lighter; */
+            display: inline-block;
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.863);
+            margin-left: 380px;
+
+
+        }
+
+        .list {
+            height: 50px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            padding: 1px;
+            width: max-content;
+            cursor: pointer;
+            text-align: center;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parentbox">
+        <div class="childnavbar">
+            <div class="logoborder">
+                <img class="img1" src="./Capture-removebg-preview.png" alt="">
+            </div>
+            <ul class="navbar">
+                <li class="content">Model S</li>
+                <li class="content">Model 3</li>
+                <li class="content">Model x</li>
+                <li class="content">Model Y</li>
+                <li class="content">Solar Roof</li>
+                <li class="content">Solar Panels</li>
+                <li class="content">Powerwall</li>
+            </ul>
+            <ul class="smallnavbar">
+                <li class="content">Shop</li>
+                <li class="content">Account</li>
+                <li class="content">Menu</li>
+            </ul>
+        </div>
+        <div class="border">
+            <div class="smallbox1">
+                <h1 class="nametop">Model 3</h1>
+
+            </div>
+            <div class="smallbox2">
+                <h4 class="nametop2">Schedule a Demo Drive
+                    <div class="divline"></div>
+                </h4>
+            </div>
+            <div class="bartext2" data-aos="fade-up" data-aos-duration="1000">
+                <div class="textboxes">
+                    <h1 class="heading">3.1s</h1>
+
+                    <p class="p1">0-60 mph*</p>
+                </div>
+                <div class="textboxes">
+                    <h1 class="heading">358
+                        mi</h1>
+
+
+                    <p class="p1">Range (EPA est.)
+
+                    </p>
+                </div>
+                <div class="textboxes">
+                    <h1 class="heading">AWD
+
+                    </h1>
+                    <p class="p1">Dual Motor
+                    </p>
+                </div>
+
+
+            </div>
+            <div class="bartext3" data-aos="fade-up" data-aos-duration="1000">
+                <div class="navbar4">
+                    <button class="btbar">Order Now</button>
+                </div>
+                <div class="navbar5">
+                    <button class="btbar2">View Inventory
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="parent1">
+        <div class="box1"><img class="img1"
+                src="https://tesla-cdn.thron.com/delivery/public/image/tesla/ea753653-02a2-4206-aac5-82a33a0a245d/bvlatuR/std/2880x1800/model-3-hero-a-desktop"
+                alt=""></div>
+        <div class="box2" data-aos="fade-up" data-aos-duration="1000">
+            <div class="navbox">
+                <h2 class="text">Safety</h2>
+            </div>
+            <div class="navbox2">
+                <h1 class="text2">Built for Safety</h1>
+            </div>
+            <div class="box3">
+                <p class="text3">Safety is the most important part of every <br> Tesla. We design our vehicles to <a
+                        class="line" href="">exceed <br> safety
+                        standards.</a>
+                    <br>
+                </p>
+            </div>
+            <div class="box3">
+                <h4 class="textheading">5-Star Rating</h4>
+                <p class="text3">Model 3 achieved NHTSA 5-star safety <br> ratings in every category and subcategory.
+                </p>
+            </div>
+            <div class="box3">
+                <h4 class="textheading">Top Safety Pick+</h4>
+                <p class="text3">Model 3 received the IIHS Top Safety Pick+ <br> award, with top ratings in all
+                    crashworthiness <br>
+                    and front crash prevention categories.</p>
+            </div>
+        </div>
+        <div class="box4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hoverboxes">
+                <img class="plus"
+                    src="https://cdn.iconscout.com/icon/premium/png-256-thumb/plus-4395702-3644354.png?f=avif&w=128"
+                    alt="">
+            </div>
+            <div class="hoverboxes1">
+                <h4 class="ltext">Learn More</h4>
+            </div>
+            <div class="hoverboxes2">
+                <button class="der">order now</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="parent2">
+        <div class="bartext4" data-aos="fade-up" data-aos-duration="2000">
+            <div class="textboxes2">
+                <h1 class="heading">3.1s
+                </h1>
+                <p class="p1">Quickest acceleration—from zero to 60 <br> mph* in as little as 3.1 seconds</p>
+            </div>
+            <div class="textboxes2">
+                <h1 class="heading">162
+                    mph</h1>
+
+                <p class="p1">Improved handling and aerodynamics <br> allow for a top speed of 162 mph</p>
+            </div>
+            <div class="textboxes2">
+                <h1 class="heading">AWD
+                </h1>
+                <p class="p1">Dual Motor All-Wheel Drive instantly <br> controls traction and torque, in all weather
+                    conditions</p>
+            </div>
+        </div>
+    </div>
+    <div class="parent3" data-aos="fade-up" data-aos-duration="1000">
+        <div class="headbox">
+            <div class="navbox3">
+                <h4 class="text4">Performance</h4>
+            </div>
+            <div class="navbox4">
+                <h1 class="text5">Quickest Acceleration</h1>
+            </div>
+            <div class="navbox5">
+                <div class="hoverboxes">
+                    <img class="plus"
+                        src="https://cdn.iconscout.com/icon/premium/png-256-thumb/plus-4395702-3644354.png?f=avif&w=128"
+                        alt="">
+                </div>
+                <div class="hoverboxes1">
+                    <h4 class="ltext">Learn More</h4>
+                </div>
+                <div class="hoverboxes2">
+                    <button class="der">order now</button>
+                </div>
+            </div>
+        </div>
+        <div class="headbox2">
+            <p class="text6">Model 3 comes with the option of dual motor all-wheel drive, <br> 20” Überturbine Wheels
+                and Performance
+                Brakes for total control in all weather <br> conditions. A carbon fiber spoiler improves stability at
+                high speeds, all allowing <br> Model 3 to accelerate from 0-60 mph* in as little as 3.1 seconds. <a
+                    href="" class="line">Chat with a Tesla</a>
+                <br><a class="line" href="">Advisor</a> to learn more about Model 3 or <a class="line" href="">schedule
+                    a demo drive</a> today.
+            </p>
+        </div>
+    </div>
+    <div class="parent4">
+        <div class="bartext4" data-aos="fade-up" data-aos-duration="2000">
+            <div class="textboxes2">
+                <h1 class="heading">2
+                </h1>
+                <p class="p1">Independent motors digitally control <br> torque to the front and rear wheels</p>
+            </div>
+            <div class="textboxes2">
+                <h1 class="heading">10
+                    ms</h1>
+
+
+                <p class="p1">Dual motors respond to changing <br> conditions in as little as 10 milliseconds</p>
+            </div>
+            <div class="textboxes2">
+                <img class="icon" src="./cloud-arrow-up-solid.svg" alt="">
+                <p class="p1">Unparalleled traction and control, in all weather conditions</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="parent5" data-aos="fade-up" data-aos-duration="2000">
+        <div class="headbox">
+            <div class="navbox3">
+                <h4 class="text4">All-Wheel Drive</h4>
+            </div>
+            <div class="navbox4">
+                <h1 class="text5">Quickest Acceleration</h1>
+                <button class="borbt">Order Now</button>
+                <button class="borbt2">View Inventory
+                </button>
+            </div>
+        </div>
+        <div class="headbox2">
+            <p class="text6">Tesla All-Wheel Drive has two independent motors for improved redundancy, each <br> with
+                only one moving part for minimal maintenance and maximum durability. Unlike <br> traditional all-wheel
+                drive systems, they digitally control torque to the front and rear <br> wheels for far better handling
+                and traction control.</p>
+        </div>
+    </div>
+    <div class="parent6">
+        <div class="bigbox1">
+            <div class="bartext5" data-aos="fade-up" data-aos-duration="2000">
+                <div class="textboxes3">
+                    <h1 class="heading2">358
+                        mi
+                    </h1>
+                    <p class="p2">Go anywhere with up to 358 mi of <br> estimated range on a single charge</p>
+                </div>
+                <div class="textboxes3">
+                    <h1 class="heading2">15
+                        min</h1>
+
+
+                    <p class="p2">echarge up to 175 mi in 15 minutes at <br> Supercharger locations</p>
+                </div>
+                <div class="textboxes3">
+                    <h1 class="heading2">40,000+</h1>
+
+                    <p class="p2">Superchargers placed along well-traveled <br> routes around the world
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="bigbox2">
+            <div class="navbox">
+                <h2 class="text">Safety</h2>
+            </div>
+            <div class="navbox2">
+                <h1 class="text2">Built for Safety</h1>
+            </div>
+            <div class="box3">
+                <p class="text3">Model 3 is fully electric, so you never need to <br> visit a gas station again. If you
+                    charge <br> overnight at home, you can wake up to a full <br> battery every morning. And when you’re
+                    on <br> the road, it’s easy to plug in along the way— <br> at any public station or with the Tesla
+                    <br> charging network. We currently have over <br> 40,000 Superchargers worldwide, with six <br> new
+                    locations opening every week. <a class="line" href="">Chat with</a> <br> <a class="line" href=""> a
+                        Tesla Advisor</a> to learn more about <br> Model 3 or
+                    <a class="line" href="">schedule a demo drive</a>
+                    today.
+                </p>
+
+
+            </div>
+
+        </div>
+        <div class="box4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hoverboxes">
+                <img class="plus"
+                    src="https://cdn.iconscout.com/icon/premium/png-256-thumb/plus-4395702-3644354.png?f=avif&w=128"
+                    alt="">
+            </div>
+            <div class="hoverboxes1">
+                <h4 class="ltext">Learn More</h4>
+            </div>
+            <div class="hoverboxes2">
+                <button class="der">order now</button>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="parent7">
+
+        <div class="borderbox2">
+            <div class="border1" data-aos="fade-up" data-aos-duration="2000">
+                <h1 class="hb">360°</h1>
+                <p class="hb2">Rear, side and forward-facing cameras <br> provide maximum visibility</p>
+            </div>
+            <div class="border1" data-aos="fade-up" data-aos-duration="2000">
+                <h1 class="hb">250
+                    m</h1>
+                <p class="hb2">Powerful visual processing at up to 250 <br> meters of range</p>
+            </div>
+            <div class="border1" data-aos="fade-up" data-aos-duration="2000">
+                <div class="circal"></div>
+                <p class="hb2">Tesla Vision detects nearby cars, helps <br> prevent potential collisions and assists
+                    <br> with
+                    parking
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="parent8">
+
+        <div class="child2">
+            <h4 class="txth6">Autopilot</h4>
+            <h1 class="txth7">Future of Driving</h1>
+
+        </div>
+        <div class="child3">
+            <p class="ptext3">Autopilot's advanced safety and convenience features are designed to assist you <br> with
+                the most burdensome parts of driving. Chat with a Tesla Advisor to learn more <br> about Model 3 or
+                schedule a demo drive today.</p>
+
+        </div>
+        <div class="box5" data-aos="fade-up" data-aos-duration="1000">
+            <div class="hoverboxes">
+                <img class="plus"
+                    src="https://cdn.iconscout.com/icon/premium/png-256-thumb/plus-4395702-3644354.png?f=avif&w=128"
+                    alt="">
+            </div>
+            <div class="hoverboxes1">
+                <h4 class="ltext">Learn More</h4>
+            </div>
+            <div class="hoverboxes2">
+                <button class="der">order now</button>
+            </div>
+        </div>
+        <div class="parent9">
+
+            <div class="border2" data-aos="fade-up" data-aos-duration="2000">
+                <h1 class="hb3">
+                    15
+                    inch</h1>
+                <p class="hb4">A touchscreen display designed to <br> improve over time</p>
+            </div>
+            <div class="border2" data-aos="fade-up" data-aos-duration="2000">
+                <i id="icon2" class="fa-solid fa-wifi"></i>
+                <p class="hb4">Powerful visual processing at up to 250 <br> meters of range</p>
+            </div>
+            <div class="border2" data-aos="fade-up" data-aos-duration="2000">
+                <i id="icon2" class="fa-solid fa-car"></i>
+                <p class="hb4">
+                    An expansive Glass Roof provides more <br> headroom and UV protection
+                </p>
+            </div>
+
+        </div>
+        <div class="parent10">
+
+            <div class="child2">
+                <h4 class="txth6">Interior</h4>
+                <h1 class="txth7">Built Around the Driver</h1>
+
+            </div>
+            <div class="child3">
+                <p class="ptext3">The inside of Model 3 is unlike any other car. You can use your smartphone as a key,
+                    <br> and access all driver controls in the central 15-inch touchscreen. The all-glass roof <br>
+                    extends from front to back, creating a sense of openness from every seat.
+                </p>
+
+            </div>
+            <div class="box5" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hoverboxes">
+                    <img class="plus"
+                        src="https://cdn.iconscout.com/icon/premium/png-256-thumb/plus-4395702-3644354.png?f=avif&w=128"
+                        alt="">
+                </div>
+                <div class="hoverboxes1">
+                    <h4 class="ltext">Learn More</h4>
+                </div>
+                <div class="hoverboxes2">
+                    <button class="der">order now</button>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="parent11">
+            <div class="boximg1">
+                <img class="img6"
+                    src="https://tesla-cdn.thron.com/delivery/public/image/tesla/649c549e-12b4-40c6-9294-7e996b8d3ccb/bvlatuR/std/4096x3071/Model-S-Specs-Hero-Desktop-LHD"
+                    alt="">
+            </div>
+
+            <div class="boximg2" data-aos="fade-up" data-aos-duration="2000">
+
+
+                <div class="navbox1">
+                    <h1 class="h5model">
+                        Model S Specs</h1>
+                </div>
+                <div class="divnav">
+                    <a href="#link"><button class="buttonbox"> Performance</button></a>
+                    <a href="#link2"><button class="buttonbox">Long Range AWD</button></a>
+                    <a href="#link3"><button class="buttonbox">Rear-Wheel Drive </button></a>
+                   
+                </div>
+
+
+                <div class="divbox" id="link">
+
+
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Battery
+                        </h4>
+                        <h5 class="h5model4"> Long Range</h5>
+
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Weigh</h4>
+                        <h5 class="h5model4">4,048 lbs
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">*Acceleration</h4>
+                        <h5 class="h5model4">3.1 s 0-60 mph
+                            with rollout subtracted</h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Cargo</h4>
+                        <h5 class="h5model4">23 cu ft
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Range</h4>
+                        <h5 class="h5model4">315 miles (EPA est.)
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Displays</h4>
+                        <h5 class="h5model4">15" Center Touchscreen</h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Drive</h4>
+                        <h5 class="h5model4">Dual Motor All-Wheel Drive
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Supercharging Max/Payment Type</h4>
+                        <h5 class="h5model4">250 kW Max; Pay Per Use</h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Seating</h4>
+                        <h5 class="h5model4">5 Adults
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Onboard Charger Max</h4>
+
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+
+                        <h4 class="h5model3">Wheels
+                        </h4>
+                        <h5 class="h5model4">20"</h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Warranty</h4>
+                        <h5 class="h5model4">
+                            Basic Vehicle - 4 years or 50,000 mi, whichever comes first
+                            Battery & Drive Unit - 8 years or 120,000 mi, whichever comes first</h5>
+                    </div>
+                </div>
+                <div class="divbox" id="link2">
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Battery
+                        </h4>
+                        <h5 class="h5model4"> Long Range</h5>
+
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Weigh</h4>
+                        <h5 class="h5model4">4,034 lbs
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">*Acceleration</h4>
+                        <h5 class="h5model4">4.2 s 0-60 mph
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Cargo</h4>
+                        <h5 class="h5model4">23 cu ft
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Range</h4>
+                        <h5 class="h5model4">358 miles (EPA est.)
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Displays</h4>
+                        <h5 class="h5model4">15" Center Touchscreen</h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Drive</h4>
+                        <h5 class="h5model4">Dual Motor All-Wheel Drive
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Supercharging Max/Payment Type</h4>
+                        <h5 class="h5model4">250 kW Max; Pay Per Use</h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Seating</h4>
+                        <h5 class="h5model4">5 Adults
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Onboard Charger Max</h4>
+                        <h5 class="h5model4">11.5 kW max (48A)</h5>
+
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+
+                        <h4 class="h5model3">Wheels
+                        </h4>
+                        <h5 class="h5model4">18" or 19" </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Warranty</h4>
+                        <h5 class="h5model4">
+                            Basic Vehicle - 4 years or 50,000 mi, whichever comes first
+                            Battery & Drive Unit - 8 years or 120,000 mi, whichever comes first</h5>
+                    </div>
+                </div>
+                <div class="divbox" id="link3">
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Battery
+                        </h4>
+                        <h5 class="h5model4"> Standard Range</h5>
+
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Weigh</h4>
+                        <h5 class="h5model4">3,862 lbs
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">*Acceleration</h4>
+                        <h5 class="h5model4">5.8 s 0-60 mph
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Cargo</h4>
+                        <h5 class="h5model4">23 cu ft
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Range</h4>
+                        <h5 class="h5model4">272 miles (EPA est.)
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Displays</h4>
+                        <h5 class="h5model4">15" Center Touchscreen</h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Drive</h4>
+                        <h5 class="h5model4">Rear-Wheel Drive
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Supercharging Max/Payment Type</h4>
+                        <h5 class="h5model4">170 kW Max; Pay Per Use</h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Seating</h4>
+                        <h5 class="h5model4">5 Adults
+                        </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Onboard Charger Max</h4>
+                        <h5 class="h5model4">7.6 kW max (32A)</h5>
+
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+
+                        <h4 class="h5model3">Wheels
+                        </h4>
+                        <h5 class="h5model4">18" or 19" </h5>
+                    </div>
+                    <div class="navbox3">
+                        <hr class="hr">
+                        <h4 class="h5model3">Warranty</h4>
+                        <h5 class="h5model4">Basic Vehicle - 4 years or 50,000 mi, whichever comes first
+                            Battery & Drive Unit - 8 years or 100,000 mi, whichever comes first </h5>
+                           
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <button class="btc">Owner's Manual
+            </button>
+            <button class="btc2">Compare
+            </button>
+
+
+
+
+        </div>
+        <div class="parent12">
+
+            <div class="box13">
+                <div class="childbox">
+                    <h1 class="txth7">Experience Model 3</h1>
+                    <h4 class="ptext3">Leasing starting at $349/mo</h4>
+
+                </div>
+                <button class="btn">Order Now</button><button class="btn2">View Inventory</button>
+
+            </div>
+            <div class="box14"><img class="img2"
+                    src="https://tesla-cdn.thron.com/delivery/public/image/tesla/1275ab15-9ad9-473c-a329-8e3eb6ebd5de/bvlatuR/std/2266x734/Model-3-Order-Hero-Desktop-Mobile-Global?quality=auto-medium&amp;format=auto"
+                    alt="">
+            </div>
+
+
+
+        </div>
+        <div class="parent13">
+
+            <p class="endtxt">Certain high data usage vehicle features require at least Standard Connectivity, including
+                maps, navigation
+                <br> and voice commands. Access to features that use cellular data and third-party licenses are subject
+                to
+                <br> change. Learn more about Standard Connectivity and any limitations.
+
+
+            </p>
+        </div>
+        <div class="parent14">
+            <ul class="content2">
+                <li class="list">Tesla © 2023</li>
+                <li class="list">
+                    Privacy & Legal
+                </li>
+                <li class="list">
+                    Vehicle Recalls</li>
+                <li class="list">Contact</li>
+                <li class="list">Careers</li>
+                <li class="list">News
+                </li>
+                <li class="list">
+                    Engage
+                </li>
+                <li class="list">
+                    Locations</li>
+
+
+            </ul>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

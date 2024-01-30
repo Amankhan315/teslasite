@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tesla</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+
+
+        .childnavbar {
+            height: 60px;
+            width: 100%;
+            background-color: transparent;
+            /* border: 1px solid; */
+            position: fixed;
+        }
+
+
+        .logoborder {
+            height: 45px;
+            width: 158px;
+            margin-left: 50px;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .img1 {
+            height: 100%;
+            width: 100%;
+        }
+
+        .navbar {
+            height: 50px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 120px;
+            padding: 1px;
+            width: max-content;
+
+            /* border: 1px solid; */
+        }
+
+        .content {
+            margin-top: 5px;
+            margin-left: -0.4%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            display: inline-block;
+            font-size: 15px;
+            color: rgba(0, 0, 0, 0.767);
+            border-radius: 5px;
+            padding: 9px 18px;
+            cursor: pointer;
+
+            transition-property: background-color;
+            transition-duration: 0.5s;
+            transition-delay: 0.2s;
+
+
+        }
+
+        .content:hover {
+            background-color: rgba(192, 192, 192, 0.253);
+        }
+
+        .smallnavbar {
+            height: 50px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+            padding: 1px;
+
+        }
+
+        .parentbox {
+            height: 100vh;
+            width: 100%;
+            background-image: url(Homepage-Model-3-Desktop-LHD.jfif);
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+        }
+
+        .bartext {
+            height: 20vh;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 130px;
+        }
+
+        .bartext2 {
+            height: 20vh;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 200px;
+        }
+
+        .navbar2 {
+            height: 10vh;
+            width: 25%;
+            margin-left: 500px;
+            display: block;
+            margin-top: -50px;
+        }
+
+        .navbar3 {
+            height: 8vh;
+            width: 25%;
+            margin-left: 500px;
+            display: block;
+        }
+
+        .navbar4 {
+            height: 6vh;
+            width: 20%;
+            margin-left: 400px;
+            margin-top: 100px;
+            display: inline-block;
+            border-radius: 5px;
+            vertical-align: top;
+        }
+
+        .btbar {
+            height: 6vh;
+            width: 270px;
+            background-color: rgb(61, 64, 69);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: white;
+            border-radius: 5px;
+            margin-top: 50px;
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+        .navbar5 {
+            height: 6vh;
+            width: 20%;
+            /* border: 1px solid; */
+            margin-left: 30px;
+            margin-top: 100px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .btbar2 {
+            height: 6vh;
+            width: 270px;
+            background-color: rgb(232, 232, 232);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: rgb(118, 120, 123);
+            border-radius: 5px;
+            margin-top: 50px;
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+
+        .textstyle {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 55px;
+            font-weight: lighter;
+
+        }
+
+        .textstyle2 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 19px;
+            font-weight: lighter;
+
+        }
+
+        .Section {
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid ; */
+            background-image: url(Homepage-Model-Y-Global-Desktop.jfif);
+            background-size: cover;
+            background-position: center;
+            padding: 1px;
+
+        }
+
+        .textstyle3 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 55px;
+            font-weight: lighter;
+            margin-top: 50px;
+
+        }
+
+        .border1 {
+            height: 18vh;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 350px;
+
+        }
+
+        .navbar6 {
+            height: 6vh;
+            width: 20%;
+            margin-left: 400px;
+            margin-top: 70px;
+            display: inline-block;
+            border-radius: 5px;
+            /* border: 1px solid; */
+            vertical-align: top;
+        }
+
+        .navbar7 {
+            height: 6vh;
+            width: 20%;
+            margin-left: 30px;
+            margin-top: 70px;
+            display: inline-block;
+            border-radius: 5px;
+            /* border: 1px solid; */
+            vertical-align: top;
+        }
+
+        .button1 {
+            height: 6vh;
+            width: 270px;
+            background-color: rgb(61, 64, 69);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: white;
+            border-radius: 5px;
+            /* margin-top: 50px; */
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+        .button2 {
+            height: 6vh;
+            width: 270px;
+            background-color: rgb(232, 232, 232);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: rgb(118, 120, 123);
+            border-radius: 5px;
+            /* margin-top: 50px; */
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+        .parentborder {
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(Homepage-Model-S-Desktop-LHD.jfif);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+
+        }
+
+        .textborder {
+            height: 30vh;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 70px;
+        }
+
+        .box1 {
+            height: 15vh;
+            width: 22%;
+            /* border: 1px solid; */
+            margin: auto;
+            display: block;
+        }
+
+        .box2 {
+            height: 10vh;
+            width: 22%;
+            /* border: 1px solid; */
+            margin: auto;
+            display: block;
+        }
+
+        .textstyle4 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 19px;
+            font-weight: lighter;
+            width: max-content;
+            margin: auto;
+            cursor: pointer;
+
+        }
+
+        .divline1 {
+            height: 1px;
+            width: 100%;
+            background-color: rgb(41, 40, 40);
+            /* margin-top: 50px; */
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+
+        .textstyle4:hover .divline1 {
+            height: 2px;
+            background-color: black;
+            cursor: pointer;
+
+        }
+
+        .border2 {
+            height: 18vh;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 200px;
+        }
+
+        .parentborder2 {
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(Homepage-Model-X-Desktop-LHD.jfif);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+
+        }
+
+        .parentborder3 {
+            height: 100vh;
+            width: 100%;
+            border: 1px solid;
+            background-image: url(_25-HP-SolarPanels-D.jfif);
+            background-position: center;
+            background-size: cover;
+            /* padding: 1px; */
+
+        }
+
+        .textstyle5 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 45px;
+            font-weight: lighter;
+            margin-top: 50px;
+        }
+
+        .parentborder4 {
+            height: 100vh;
+            width: 100%;
+            border: 1px solid;
+            background-image: url(Homepage-SolarRoof-Desktop-Global.jfif);
+            background-position: center;
+            background-size: cover;
+            /* padding: 1px; */
+
+        }
+
+        .parentborder5 {
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+            background-image: url(dd739764-bcaa-4263-9488-8c73bc9fb046.jfif);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+
+        }
+
+        .button3 {
+            height: 6vh;
+            width: 270px;
+            background-color: rgb(61, 64, 69);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: white;
+            border-radius: 5px;
+            /* margin-top: 50px; */
+            border: none;
+            margin-left: 550px;
+            margin-top: 50px;
+
+            cursor: pointer;
+
+        }
+
+        .parentborder6 {
+            height: 10vh;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: -30px;
+        }
+
+        .content2 {
+            margin-top: 5px;
+            margin-left: -0.4%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-weight: lighter; */
+            display: inline-block;
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.863);
+            margin-left: 380px;
+
+
+        }
+
+        .list {
+            height: 50px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            padding: 1px;
+            width: max-content;
+            cursor: pointer;
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parentbox">
+        <div class="childnavbar">
+            <div class="logoborder">
+                <img class="img1" src="Capture-removebg-preview.png" alt="">
+            </div>
+            <ul class="navbar">
+                <li class="content">Model S</li>
+                <li class="content">Model 3</li>
+                <li class="content">Model x</li>
+                <li class="content">Model Y</li>
+                <li class="content">Solar Roof</li>
+                <li class="content">Solar Panels</li>
+                <li class="content">Powerwall</li>
+            </ul>
+            <ul class="smallnavbar">
+                <li class="content">Shop</li>
+                <li class="content">Account</li>
+                <li class="content">Menu</li>
+            </ul>
+        </div>
+        <div class="bartext">
+            <div class="navbar2">
+                <h1 class="textstyle">Model 3</h1>
+            </div>
+            <div class="navbar3">
+                <h5 class="textstyle2">Leasing starting at $349/mo</h5>
+            </div>
+            <div class="bartext2">
+                <div class="navbar4">
+                    <button class="btbar">Custom Order</button>
+                </div>
+                <div class="navbar5">
+                    <button class="btbar2">Demo Drive</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="Section">
+        <h1 class="textstyle3">Model Y</h1>
+        <div class="border1">
+            <div class="navbar6">
+                <button class="button1">Custom Order</button>
+            </div>
+            <div class="navbar7">
+                <button class="button2">Demo Drive</button>
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="parentborder">
+        <div class="textborder">
+            <div class="box1">
+                <h1 class="textstyle3">Model S</h1>
+            </div>
+            <div class="box2">
+                <h5 class="textstyle4">Schedule a Demo Drive
+
+                    <div class="divline1"></div>
+
+                </h5>
+
+            </div>
+
+        </div>
+        <div class="border2">
+            <div class="navbar6">
+                <button class="button1">Custom Order</button>
+            </div>
+            <div class="navbar7">
+                <button class="button2">Demo Drive</button>
+            </div>
+        </div>
+    </div>
+    <div class="parentborder2">
+        <div class="textborder">
+            <div class="box1">
+                <h1 class="textstyle3">Model X</h1>
+            </div>
+            <div class="box2">
+                <h5 class="textstyle4">Schedule a Demo Drive
+                    <div class="divline1"></div>
+                </h5>
+            </div>
+        </div>
+        <div class="border2">
+            <div class="navbar6">
+                <button class="button1">Custom Order</button>
+            </div>
+            <div class="navbar7">
+                <button class="button2">Demo Drive</button>
+            </div>
+        </div>
+    </div>
+    <div class="parentborder3">
+        <div class="textborder">
+            <div class="box1">
+                <h1 class="textstyle5">Solar Panels</h1>
+            </div>
+            <div class="box2">
+                <h5 class="textstyle4">Lowest Cost Solar Panels in America</h5>
+            </div>
+        </div>
+        <div class="border2">
+            <div class="navbar6">
+                <button class="button1">Custom Order</button>
+            </div>
+            <div class="navbar7">
+                <button class="button2">Demo Drive</button>
+            </div>
+        </div>
+    </div>
+    <div class="parentborder4">
+        <div class="textborder">
+            <div class="box1">
+                <h1 class="textstyle5">Solar Roof</h1>
+            </div>
+            <div class="box1">
+                <h5 class="textstyle4">Produce Clean Energy From Your Roof</h5>
+            </div>
+        </div>
+        <div class="border2">
+            <div class="navbar6">
+                <button class="button1">Custom Order</button>
+            </div>
+            <div class="navbar7">
+                <button class="button2">Demo Drive</button>
+            </div>
+        </div>
+    </div>
+    <div class="parentborder5">
+        <div class="textborder">
+            <div class="box1">
+                <h1 class="textstyle5">Accessories</h1>
+            </div>
+        </div>
+        <div class="border2">
+            <button class="button3">Shop Now</button>
+        </div>
+    </div>
+    <div class="parentborder6">
+        <ul class="content2">
+            <li class="list">Tesla © 2023</li>
+            <li class="list">
+                Privacy & Legal
+            </li>
+            <li class="list">
+                Vehicle Recalls</li>
+            <li class="list">Contact</li>
+            <li class="list">Careers</li>
+            <li class="list">News
+            </li>
+            <li class="list">
+                Engage
+            </li>
+            <li class="list">
+                Locations</li>
+
+
+        </ul>
+    </div>
+
+
+
+
+</body>
+
+</html>
